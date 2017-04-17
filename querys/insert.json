@@ -1,0 +1,14 @@
+db.controlIp.insert(
+   {
+         ip : "127.0.0.1",
+         cantidad : "3"	 
+      
+   }
+)
+
+db.controlIp.find().forEach(function (doc){ d = doc._id.getTimestamp();print(d.getTime())})
+
+
+db.controlIp.find().forEach(function (doc){ d = doc._id.getTimestamp();print(d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()) })
+2014-12-23 3:4:41
+2014-12-23 3:4:53
